@@ -47,6 +47,12 @@
       "direction": "upload"
     },
     {
+      "type": "file",
+      "source": "./files/applogs",
+      "destination": "~/applogs",
+      "direction": "upload"
+    },
+    {
       "type": "shell",
       "script": "build.sh"
     }
