@@ -30,6 +30,17 @@ sudo yum -y install \
 # Apply custom apache config
 sudo mv -f ~ec2-user/httpd.conf /etc/httpd/conf/httpd.conf
 
+# Additional logrotate config
+sudo chown root:root \
+    ~ec2-user/applogs
+
+sudo chmod 644 \
+    ~ec2-user/applogs
+
+sudo mv -f \
+    ~ec2-user/applogs \
+    /etc/logrotate.d/
+
 # Setup AWS CW logging
 sudo yum install -y awslogs
 
